@@ -28,3 +28,9 @@ jobs:
       - name: build with mingw-w64
         run: |
           make -f Makefile.mingw
+      - name: Upload publish artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: mingw
+          path: .
+          retention-days: 1
